@@ -1,9 +1,10 @@
-GIT COMMANDS USED
+GIT AND GITHUB COMMANDS USED
 Name: Pushkar Desai
 Roll Number: 2024eb02433
 
 Working directory: git-workflow/
 Commands are listed in execution order.
+GitHub CLI commands are included alongside all Git commands.
 
 1. git init -b main
    Initialize the local repository with main as its first branch, before creating anything on GitHub.
@@ -107,15 +108,51 @@ Commands are listed in execution order.
 34. git rev-parse HEAD
    Record the complete final commit identifier.
 
-GITHUB INTEGRATION: PENDING
-No GitHub repository was created and no push was attempted because only local commits were authorized.
-The following commands are a continuation plan. They have NOT been executed:
+35. git status --short
+   Check the working tree before completing GitHub integration.
 
-gh repo create PushkarDesai-06/sdp-sga2-git-workflow --public
-  Create the public remote repository after receiving publication approval.
-git remote add origin https://github.com/PushkarDesai-06/sdp-sga2-git-workflow.git
-  Connect this existing local repository to the newly created GitHub repository.
-git push -u origin main feature
-  Push both branches and their shared history, and set their upstream tracking branches.
-gh repo view PushkarDesai-06/sdp-sga2-git-workflow --json url,visibility
-  Verify the real repository URL and public visibility before reporting publication.
+36. git remote -v
+   Verify that the local repository initially has no configured remote.
+
+37. gh repo create PushkarDesai-06/sdp-sga2-git-workflow --public --description 'Software Development Practices SGA 2: Git workflow by Pushkar Desai (2024eb02433)'
+   Create an empty public GitHub repository after completing the local workflow.
+
+38. git remote add origin https://github.com/PushkarDesai-06/sdp-sga2-git-workflow.git
+   Connect the existing local repository to the new public GitHub repository.
+
+39. git add README.md git_commands.txt
+   Stage the repository URL and the completed publication command documentation.
+
+40. git commit -m 'Document public GitHub repository and publication commands'
+   Record the GitHub integration details before pushing the completed project.
+
+41. git push -u origin main feature
+   Push both branches, including all workflow commits, and configure their upstream branches.
+
+42. gh repo view PushkarDesai-06/sdp-sga2-git-workflow --json url,visibility
+   Verify the published repository URL and confirm PUBLIC visibility.
+
+43. git ls-remote --heads origin
+   Read the actual branch hashes from GitHub to verify both branches were published.
+
+44. git rev-parse main feature
+   Read the two local branch hashes and compare them with the published hashes.
+
+45. git log --graph --oneline --decorate --all
+   Display the final history with local branches and their GitHub tracking references.
+
+46. git branch -v
+   Verify the final branch tips after publishing.
+
+47. git status --short
+   Verify the working tree is clean after publication.
+
+48. git fsck --full
+   Check the integrity of the completed local repository.
+
+49. git rev-parse HEAD
+   Record the final published main commit identifier.
+
+PUBLIC REPOSITORY
+https://github.com/PushkarDesai-06/sdp-sga2-git-workflow
+Published branches: main and feature.
